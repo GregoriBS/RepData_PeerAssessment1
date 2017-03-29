@@ -108,7 +108,7 @@ The mean is `r format(mean2,digits=7,nsmall=2)` and the median is `r format(medi
 A new factor variable with two levels ("weekday" vs "weekend") is created in the dataset, indicating wheter a given date is a weekday or weekend day.
 ```{r, ehco=TRUE}
 activity2$weekday <- weekdays(activity2$date) 
-activity2$daytype <- ifelse(activity2$weekday %in% c("dissabte","diumenge"), "weekend", "weekday")
+activity2$daytype <- ifelse(activity2$weekday %in% c("sábado","domingo"), "weekend", "weekday")
 ```
 A panel plot containing a time series plot of the 5-minute interval and the average number of steps taken, averaged across all weekday days or weekend days is made.
 ```{r, echo=TRUE}
